@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+}
+
+#app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+nav button {
+  margin: 0 10px;
+  padding: 5px 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background: #0056b3;
+}
+
+.hidden {
+  display: none;
+}
+
+#drag-area {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.draggable {
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: move;
+}
+
+#preview-area {
+  border: 1px dashed #ccc;
+  min-height: 200px;
+  margin: 20px 0;
+  padding: 10px;
+  background: white;
+}
+
+button {
+  padding: 10px 20px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #218838;
+}
+
+#ar-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
