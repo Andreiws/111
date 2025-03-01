@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AR Titan Studio</title>
+  <!-- Стили -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Библиотеки -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/webxr-polyfill@2.0.3/build/webxr-polyfill.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/opencv.js@1.7.0/opencv.min.js"></script>
+  <!-- Наши скрипты -->
+  <script src="editor.js" defer></script>
+  <script src="ar-viewer.js" defer></script>
+  <script src="analytics.js" defer></script>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>AR Titan Studio</h1>
+      <nav>
+        <button id="create-project">Создать проект</button>
+        <button id="scan-ar">Сканировать</button>
+        <button id="view-analytics">Аналитика</button>
+      </nav>
+    </header>
+    <main id="main-content">
+      <div id="editor" class="hidden">
+        <h2>Редактор AR</h2>
+        <div id="drag-area">
+          <div class="draggable" draggable="true" data-type="image">Изображение</div>
+          <div class="draggable" draggable="true" data-type="3d">3D-объект</div>
+          <div class="draggable" draggable="true" data-type="text">Текст</div>
+        </div>
+        <div id="preview-area"></div>
+        <button id="save-project">Сохранить</button>
+      </div>
+      <div id="ar-viewer" class="hidden">
+        <div id="ar-container"></div>
+      </div>
+      <div id="analytics" class="hidden">
+        <h2>Аналитика</h2>
+        <p>Просмотров: <span id="views">0</span></p>
+        <p>Геолокация последнего пользователя: <span id="location">Загрузка...</span></p>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
